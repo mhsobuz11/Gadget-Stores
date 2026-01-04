@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget Store - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Gadget Store</h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="phones.html">Phones</a>
+            <a href="login.html">Account</a>
+        </nav>
+            <!-- Search Box -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search phones..." onkeyup="searchProducts()">
+    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to Gadget Store</h2>
+        <p>Find your favorite phone here!</p>
+        <a href="phones.html" class="btn">Shop Now</a>
+    </section>
+<section class="featured-products">
+    <h2>Featured Phones</h2>
+    <div class="products">
+        <div class="product-card">
+            <img src="images/phone4.png" alt="iPhone 17 Pro Max">
+            <div class="product-info">
+                <h3>iPhone 17 Pro Max</h3>
+                <p>1TB, Golden</p>
+                <p class="price">189990 TAKA</p>
+                <a href="phones.html" class="btn">Buy Now</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="images/phone5.png" alt="iPhone 17">
+            <div class="product-info">
+                <h3>iPhone 17</h3>
+                <p>256GB, Green</p>
+                <p class="price">136999 TAKA</p>
+                <a href="phones.html" class="btn">Buy Now</a>
+            </div>
+        </div>
+        <!-- Add more featured phones -->
+    </div>
+</section>
+
+    <footer>
+        &copy; 2025 Gadget Store. All rights reserved.
+    </footer>
+</body>
+</html>

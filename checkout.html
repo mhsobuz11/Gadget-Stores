@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Gadget Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gadget Store</h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="phones.html">Phones</a>
+            <a href="login.html">Account</a>
+        </nav>
+    </header>
+
+    <section class="checkout-container">
+        <h2>Checkout</h2>
+        <div class="product-summary">
+            <p>Product: <span id="product-name"></span></p>
+            <p>Price: <span id="product-price"></span> TAKA</p>
+        </div>
+
+        <form id="checkout-form">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="text" name="address" placeholder="Address" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit" class="btn">Confirm Purchase</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 Gadget Store. All rights reserved.
+    </footer>
+
+    <script>
+        // Get product info from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        const price = urlParams.get('price');
+
+        document.getElementById('product-name').textContent = name;
+        document.getElementById('product-price').textContent = price;
+
+        // Handle form submission
+        document.getElementById('checkout-form').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert(`Thank you, ${this.fullname.value}! Your order for ${name} (${price} TAKA) has been placed.`);
+            this.reset();
+            window.location.href = "index.html"; // redirect to home page
+        });
+    </script>
+</body>
+</html>
